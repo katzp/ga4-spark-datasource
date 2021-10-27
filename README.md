@@ -4,7 +4,7 @@ the goal of this project to extend Spark to easily pull reports into a
 Spark dataframe such as:
 ```
 spark.read
-  .format("com.pkatz.ga.spark.datasource.GA4DataSource")
+  .format("com.katzp.ga4.spark.datasource.GA4DataSource")
   .option("dimensions", "date,country")
   .option("metrics", "totalUsers")
   .option("propertyId", "224266535")
