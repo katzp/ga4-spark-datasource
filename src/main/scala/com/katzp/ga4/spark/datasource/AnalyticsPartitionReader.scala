@@ -62,8 +62,8 @@ class AnalyticsPartitionReader(partition: AnalyticsPartition, schema: StructType
         case d: DoubleType    => data.toDouble
         case l: LongType      => data.toLong
         case f: FloatType     => data.toFloat
-        case t: TimestampType => DateUtils.microSecondsSinceEpoch(data).orNull
-        case date: DateType   => DateUtils.daysSinceEpoch(data).orNull
+        case t: TimestampType => DateUtils.microSecondsSinceEpoch(data).getOrElse(null)
+        case date: DateType   => DateUtils.daysSinceEpoch(data).getOrElse(null)
       }
     }
     InternalRow.fromSeq(castedToInternalTypes)
