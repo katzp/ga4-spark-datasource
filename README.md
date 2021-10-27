@@ -7,7 +7,7 @@ spark.read
   .format("com.katzp.ga4.spark.datasource.GA4DataSource")
   .option("dimensions", "date,country")
   .option("metrics", "totalUsers")
-  .option("propertyId", "224266535")
+  .option("propertyId", "XXXXXXXXX")
   .option("startDate", "2021-09-01")
   .option("endDate", "2021-10-20")
   .option("serviceAccount", service)
